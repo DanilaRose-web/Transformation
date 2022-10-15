@@ -1,0 +1,73 @@
+.space {
+   padding-top: 75px;
+   padding-bottom: 110px;
+   position: relative;
+   background: url('../img/dist/space/gagarin-bg.webp') no-repeat left;
+   background-size: contain;
+}
+
+.space-container {
+   padding: 0 30px;
+   position: relative;
+   z-index: 1;
+}
+
+.space-title {
+   margin-bottom: 30px;
+   font-family: 'Playfair Display', sans;
+   font-style: normal;
+   font-weight: normal;
+   font-size: 30px;
+   line-height: 140%;
+   letter-spacing: -0.01em;
+   text-transform: uppercase;
+   color: #FFFFFF;
+   max-width: 440px;
+}
+
+.about-title {
+   padding-top: 67px;
+   margin-bottom: 73px;
+}
+
+.img-mob {
+   margin-bottom: 28px;
+}
+
+.img-mob img {
+   max-width: 100%;
+   height: auto;
+   text-align: center;
+}
+
+.space-text {
+   margin-bottom: 43px;
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 150%;
+   color: #FFFFFF;
+   max-width: 463px;
+}
+
+@media all and (max-width: 768px) {
+   .space-container { padding: 0 15px; }
+}
+
+@media all and (max-width: 700px) {
+   .space { padding-top: 73px; padding-bottom: 110px; }
+}
+
+@media all and (max-width: 600px) {
+   .space { background: url('../img/dist/space/space-media600.webp') no-repeat center; background-size: cover; padding-bottom: 73px; }
+}
+@media all and (max-width: 500px) {
+   .space-title { font-size: calc((100vw - 280px)/ (500 - 280) * (30 - 24) + 24px); }
+   .img-mob { position: relative; right: -15px; display: flex; justify-content: flex-end; }
+}
+@media all and (max-width: 400px) {
+   .space-text { font-size: 15px; }
+}
+
+@media all and (min-width: 601px) {
+   .img-mob { display: none; }
+}

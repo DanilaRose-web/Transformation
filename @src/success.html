@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      <meta name="description" content= />
+      <meta name="author" content= />
+      <link rel="stylesheet" href="lib/animate.min.css">
+      <!-- <link rel="stylesheet" href="css/hover-min.css"> -->
+      <link rel="stylesheet" href="lib/bootstrap.min.css">
+      <link rel="stylesheet" href="lib/reset.css">
+      <link rel="stylesheet" href="lib/slick/slick.css">
+      <link rel="stylesheet" href="lib/slick/slick-theme.css">
+      <link rel="stylesheet" href="lib/fonts.css">
+      
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+      <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+      <link rel="stylesheet" href="lib/ekko-lightbox.css">
+      <link rel="stylesheet" href="css/style.min.css">
+      <title></title>
+   </head>
+   <body>
+
+
+      <div class="fullscreen">
+         @@include('_header.html')
+
+         <section class="success">
+            <div class="container-fluid success-container">
+               <div class="success-img"><img src="img/dist/success-icon.svg" alt=""></div>
+               <p class="success-text">Ваши данные успешно отправлены, спасибо! Мы свяжемся с Вами в течениии нескольких минут</p>
+            </div>
+         </section>
+
+         <section class="contacts">
+               <div class="container-fluid contacts-container">
+                  <h2 class="section-title contacts-title">Контакты</h2>
+               </div>
+
+               <div class="contacts-block">
+                  <div class="contacts-item contacts-col wow fadeInLeft">
+                     <div id="map"></div>
+                  </div>
+
+                  <div class="contacts-item info contacts-col wow fadeInRight">
+                     <div class="contacts-info">
+                           <div class="contacts-info--item">
+                              <div class="info--item-icon"><svg><use xlink:href="img/dist/svg-sprite.svg#main-item1"></use></svg></div>
+                              <div class="info--item-descr">
+                                 <div class="item-descr-title">Торжественное открытие</div>
+                                 <div class="item-descr-info">8 апреля в 19:00</div>
+                              </div>
+                           </div>
+
+                           <div class="contacts-info--item">
+                              <div class="info--item-icon"><svg><use xlink:href="img/dist/svg-sprite.svg#main-item2"></use></svg></div>
+                              <div class="info--item-descr">
+                                 <div class="item-descr-title">Место проведения</div>
+                                 <div class="item-descr-info">Москва, Петровка 28, Галерея Art-Office Gallery FEDINI </div>
+                              </div>
+                           </div>
+
+                           <div class="contacts-info--item">
+                              <div class="info--item-icon"><svg><use xlink:href="img/dist/svg-sprite.svg#main-item3"></use></svg></div>
+                              <div class="info--item-descr">
+                                 <div class="item-descr-title">Период проведения</div>
+                                 <div class="item-descr-info">8 – 23 апреля 2021г.</div>
+                              </div>
+                           </div>
+                     </div>
+
+                     <div class="contacts-author ">
+                           <div class="author-block">
+                              <svg><use xlink:href="img/dist/svg-sprite.svg#author-icon"></use></svg>
+                              <div class="author-info">
+                                 <div class="author-info--title">Покупка картин</div>
+                                 <div class="author-info--block">
+                                       <div class="name">Аркадий Ким</div>
+                                       <a href="tel: +7 925 062 68 87" class="phone">+7 925 062 68 87</a>
+                                       <div class="social">
+                                          <a href=""><svg><use xlink:href="img/dist/svg-sprite.svg#facebook"></use></svg></a>
+                                          <a href=""><svg><use xlink:href="img/dist/svg-sprite.svg#insta"></use></svg></a>
+                                       </div>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="author-block">
+                              <svg><use xlink:href="img/dist/svg-sprite.svg#author-icon"></use></svg>
+                              <div class="author-info">
+                                 <div class="author-info--title">Справки и аккредитация СМИ:</div>
+                                 <div class="author-info--block">
+                                       <div class="name">Павел Панкратов</div>
+                                       <a class="no-border phone" href="tel: +7 909 169 00 69" class="phone">+7 909 169 00 69</a>
+                                 </div>
+                                 <a class="no-border" href="mailto: w1690069@gmail.com">w1690069@gmail.com</a>
+                              </div>
+                           </div>
+
+                           <a class="download-doc" href="" download>
+                              <svg><use xlink:href="img/dist/svg-sprite.svg#download-doc"></use></svg>
+                              <span>Скачать пресс-релиз</span>
+                           </a>
+                     </div>
+                  </div>
+               </div>
+         </section>
+
+         <footer>
+            <div class="container-fluid footer-container">
+               <a href="/index.html" class="logo-name">Трансформация</a>
+               <div class="all-rights">&copy; 2021 All Rights Reserved. Все права защищены.</div>
+            </div>
+         </footer>
+      </div>
+
+      
+
+      
+      <div class="arrow-up">
+         <svg><use xlink:href="img/dist/svg-sprite.svg#arrow-up"></use></svg>
+      </div>
+      
+      @@include('_mobile-menu.html')
+      @@include('_popup.html')
+      @@include('_ticket.html')
+      <div class="overlay"></div>
+
+      <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <!-- <script src="lib/jQuery-1.12.4.min.js"></script> -->
+      <!-- <script src="lib/bootstrap.min.js"></script> -->
+      
+      <script src="lib/slick/slick.min.js"></script>
+      <script src="https://unpkg.com/imask"></script>
+      <script src="lib/wow.min.js"></script>
+      <!-- <script>
+         new WOW().init();
+      </script>
+      <script src="lib/wow.min.js"></script> -->
+
+      <script src="lib/ekko-lightbox.min.js"></script>
+      
+      <script src="js/script.min.js"></script>
+      <script>
+         $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+               event.preventDefault();
+               $(this).ekkoLightbox();
+         });
+      </script>
+   </body>
+</html>

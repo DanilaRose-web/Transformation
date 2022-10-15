@@ -1,0 +1,277 @@
+.modal-form-wrap {
+   border-radius: 5px;
+}
+
+.request-form {
+   padding-top: 25px;
+   padding-left: 25px;
+   padding-right: 25px;
+   background: #352F46;
+}
+
+.form-title {  
+   margin-bottom: 0;
+   padding: 23px 0 20px 0;
+   font-weight: 600;
+   font-size: 22px;
+   line-height: 27px;
+   text-transform: uppercase;
+   text-align: center;
+   color: #FFFFFF;
+   background: #6A369E;
+}
+
+.form-text {
+   padding: 0 12px;
+   margin-bottom: 10px;
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 150%;
+   color: #FFFFFF;
+}
+
+.form-text a {
+   margin-left: 5px;
+   display: inline-block;
+   font-weight: 600;
+   color: white;
+   transition: all 0.3s ease;
+}
+.form-text a:hover {
+   color: #dac4f0;
+   transform: translateX(10px);
+}
+
+
+.input-wrap {
+   margin-top: 25px;
+}
+
+input {
+   padding: 0 6px 0 26px;
+   background: #565069;
+   border-radius: 30px;
+   display: flex;
+   align-items: center;
+   height: 52px;
+   width: 100%;
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 24px;
+   display: flex;
+   align-items: center;
+   letter-spacing: 0.1px;
+   color: #BABDBF;
+   border: 1px solid transparent;
+}
+
+.form-item:first-child {
+   margin-bottom: 17px;
+}
+
+.form-item.error input {
+   margin-bottom: 0;
+   border: 1px solid red;
+}
+
+
+.message-error-name, .message-error-phone {
+
+   padding-top: 10px;
+   font-weight: 500;
+   font-size: 12px;
+   color: red;
+   display: none;
+}
+
+
+.submit-block {
+   padding-top: 30px;
+   padding-bottom: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.submit-btn {
+   margin-right: 15px;
+}
+
+.confidentional-title {
+   padding: 15px 25px 15px 25px;
+   text-align: center;
+   font-weight: 400;
+   font-size: 12px;
+   line-height: 15px;
+   color: #FFFFFF;
+   background: #565069;
+}
+
+
+
+
+
+
+/* checkbox */
+
+.c-custom-checkbox {
+   position: relative;
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+   width: max-content;
+   color: white;
+}
+
+.c-custom-checkbox.error {
+   color: red;
+}
+
+.c-custom-checkbox span {
+   margin-left: 8px;
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 150%;
+   display: inline-block;
+   cursor: pointer;
+   color: white;
+}
+
+/* Убираем стандартный input, делая его прозрачным и убираем из основного потока, 
+   оставляя также возможность реагирования пользователя с ним. display: none и visibility: hidden не подходят, так как они убирают
+   возможность польователя взаимодействовать с элементом */
+.c-custom-checkbox input[type=checkbox] {
+   margin: 0;
+   position: absolute;
+   opacity: 0;
+   width: 20px;
+   height: 20px;
+}
+
+/* визуально показать контур фокуса, когда SVG получает фокус */
+.c-custom-checkbox input[type="checkbox"]:focus + svg {
+   /* outline: 3px solid #E55360;
+   outline-offset: 3px; */
+}
+
+/* скрыть стили фокуса для пользователей мыши - обратная реакция */
+.c-custom-checkbox input[type="checkbox"]:focus:not(:focus-visible) + svg {
+   outline: none;
+}
+
+.c-custom-checkbox svg {
+ width: 20px;
+ height: 20px;
+}
+
+* {
+transition: all 0.1s linear;
+}
+
+/* style changes inside the svg when the checkbox is checked */
+/* Для c-custom-checkbox нахожу дочерний элемент .checkbox__bg, который лежит в svg, который является дочерним к c-custom-checkbox и, который стоит после input  */
+.c-custom-checkbox input[type="checkbox"]:checked + svg .checkbox__bg {
+   fill: #A984CF;
+   stroke: #A984CF;
+}
+
+.c-custom-checkbox input[type="checkbox"]:checked + svg .checkbox__checkmark {
+   stroke: white;
+}
+
+
+/* оптимизация для режима высокой контрастности Windows */
+.c-custom-checkbox svg {
+ @media screen and (-ms-high-contrast: active) {
+   .checkbox__bg {
+     stroke: windowText;
+   }
+ }
+}
+
+@media screen and (-ms-high-contrast: active) {
+   .c-custom-checkbox input[type="checkbox"]:checked + svg .checkbox__bg {
+       fill: windowText;
+   }
+
+   .c-custom-checkbox input[type="checkbox"]:checked + svg .checkbox__checkmark {
+       stroke: highlight;
+   }
+}
+
+
+
+
+
+
+
+
+
+::-webkit-input-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+   color: #BABDBF;
+   font-weight: 400;
+}
+:-moz-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+   color: #BABDBF;
+   font-weight: 400;
+   opacity: 1; /* Firefox */
+}
+::-moz-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+   color: #BABDBF;
+   font-weight: 400;
+   opacity: 1; /* Firefox */
+}
+:-ms-input-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+   color: #BABDBF;
+   font-weight: 400;
+   opacity: 1; /* Firefox */
+}
+::-ms-input-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+   color: #BABDBF;
+   font-weight: 400;
+   opacity: 1; /* Firefox */
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+   color: #BABDBF;
+   font-weight: 400;
+   opacity: 1; /* Firefox */
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #BABDBF;
+   font-weight: 400;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color: #BABDBF;
+   font-weight: 400;
+}
+
+
+
+
+.response-result {
+   padding: 70px 25px;
+   text-align: center;
+   font-size: 16px;
+   font-weight: 600;
+   line-height: 120%;
+   background: #352F46;
+   display: none;
+}
+
+checkbox.checked {
+   text-decoration: none;
+}
+
+@media all and (max-width: 430px) {
+   .request-form { padding-left: 12px; padding-right: 12px; }
+}
+
+@media all and (max-width: 400px) {
+   .submit-btn { margin-bottom: 10px; }
+   .form-title { font-size: calc((100vw - 280px)/(400 - 280) * (22 - 18) + 18px);  }
+}
+
+@media all and (max-width: 350px) {
+   .form-title { padding: 17px 0 15px; }
+   .submit-block { flex-direction: column; align-items: center; width: 100%; }
+}

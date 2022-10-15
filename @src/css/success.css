@@ -1,0 +1,34 @@
+.success {
+   padding-top: 100px;
+   padding-bottom: 100px;
+}
+
+.success-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.success-img {
+   margin-bottom: 30px;
+   max-width: 300px;
+}
+
+.success-img img {
+   max-width: 100%;
+   height: auto;
+}
+
+.success-text {
+   margin-bottom: 20px;
+   font-size: 20px; 
+   font-weight: 600;
+   line-height: 120%;
+   color: #6A369E;
+   text-align: center;
+   max-width: 660px;
+}
+
+@media all and (max-width: 600px) {
+   .success { padding-top: 50px; padding-bottom: 50px; }
+}

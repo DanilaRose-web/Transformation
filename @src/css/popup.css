@@ -1,0 +1,221 @@
+.wrap-modal {
+   padding: 15px 15px;
+   width: 100%;
+   height: 100%;
+   min-height: 100vh;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 10;
+   visibility: hidden;
+   background-color: rgba(0, 0, 0, 0);
+   display: flex;
+   align-items: center;
+   -webkit-transition: all 0.3s linear;
+   transition: all 0.3s linear;
+}
+
+.wrap-modal.show {
+   background-color: rgba(0, 0, 0, 0.8);
+   visibility: visible;
+   -webkit-transition: all 0.3s linear;
+   transition: all 0.3s linear;
+   overflow-y: auto;
+}
+
+.modal-overlay {
+   width: 100%;
+   height: 100%;
+   visibility: hidden;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 1;
+   -webkit-transition: all 0.3s linear;
+   transition: all 0.3s linear;
+}
+
+.modal-overlay.show {
+   visibility: visible;
+   -webkit-transition: all 0.3s linear;
+   transition: all 0.3s linear;
+}
+
+.modal-window {
+   margin: 0 auto;
+   max-width: 448px;
+   width: 100%;
+   position: relative;
+   z-index: 3;
+   opacity: 0;
+   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   background: url('../img/dist/footer-bg1.webp') repeat center;
+   visibility: hidden;
+   border-radius: 25px;
+   -webkit-transition: all 0.3s linear;
+   transition: all 0.3s linear;
+}
+
+.modal-window.show {
+   opacity: 1;
+   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+   visibility: visible;
+   -webkit-transition: all 0.3s linear;
+   transition: all 0.3s linear;
+}
+
+.modal-wrap {
+   padding: 25px 0;
+   margin: 0 auto;
+   max-width: 448px;
+   position: relative;
+   background-size: cover;
+}
+
+.modal-container {
+   padding: 0 15px;
+}
+
+.modal-form-wrap {
+   position: relative;
+}
+
+/* .close-modal {
+   position: absolute;
+   top: -33px;
+   right: -5px;
+   font-size: 22px;
+   cursor: pointer;
+   color: black;
+   border: none;
+   outline: none;
+   background-color: transparent;
+   -webkit-transition: -webkit-transform 0.2s;
+   transition: -webkit-transform 0.2s;
+   transition: transform 0.2s;
+   transition: transform 0.2s, -webkit-transform 0.2s;
+} */
+
+.close-modal {
+   margin: 0;
+   padding: 0;
+   width: 22px;
+   height: 22px;
+   position: absolute;
+   top: -25px;
+   right: 0;
+   opacity: 1;
+   cursor: pointer;
+}
+
+.close-modal::after, .close-modal::before {
+   content: '';
+   position: absolute;
+   width: 22px;
+   height: 2px;
+   top: 10px;
+   left: 1px;
+   background: #fff;
+}
+
+.close-modal::after {
+   transform: rotate(45deg);
+}
+
+.close-modal::before {
+   transform: rotate(-45deg);
+}
+
+/* .close-modal svg {
+   fill: white;
+   width: 25px;
+   height: 25px;
+}
+
+.close-modal:active {
+   -webkit-transform: scale(0.9);
+   transform: scale(0.9);
+}
+
+.close-modal svg:hover {
+   fill: #ffc107;
+} */
+
+.modal-title {
+   font-family: Montserrat, sans-serif;
+   font-style: normal;
+   font-weight: normal;
+   font-size: 20px;
+   line-height: 140%;
+   letter-spacing: -0.01em;
+   color: #FFFFFF;
+   border: none;
+}
+
+.modal-subtitle {
+   margin: 0 auto;
+   margin-bottom: 15px;
+   text-align: center;
+   font-weight: 600;
+   color: #fff;
+   font-size: 18px;
+   line-height: 1.2;
+}
+
+.form-title {
+   text-align: center;
+   margin: 0 auto;
+   margin-bottom: 15px;
+   text-align: center;
+   font-weight: 600;
+   color: #ed1b24;
+   font-size: 18px;
+   position: relative;
+   line-height: 1.2;
+}
+
+
+
+
+.response-result {
+   color: white;
+}
+
+@media all and (max-width: 860px) {
+   .modal-container { padding: 0 15px; }
+   .input-modal { max-width: 100%; }
+}
+
+@media all and (max-width: 770px) {
+   .wrap-modal .modal-title { font-size: calc((100vw - 280px)/(770 - 280) * (49 - 33) + 33px); }
+}
+
+@media all and (max-height: 500px) {
+   .wrap-modal { display: block; }
+}
+
+@media all and (max-width: 670px) {
+   .form-modal-request { flex-direction: column; }
+   .input-modal { margin-bottom: 10px; }
+   .btn-modal { max-width: 100%; margin-left: 0; margin-top: 0; }
+}
+
+@media all and (max-width: 570px) {
+   .modal { padding: 70px 0; }
+}
+
+@media all and (max-width: 560px) {
+   .wrap-modal .modal-subtitle { font-size: calc((100vw - 280px)/(560 - 280) * (18 - 16) + 16px); }
+}
+
+@media all and (max-width: 430px) {
+   .modal-container { padding: 0; }
+}
+
+@media all and (max-width: 380px) {
+   .close-modal { top: -33px; right: -5px; }
+}
+
+@media all and (max-height: 600px) {
+   .wrap-modal { display: block; }
+}

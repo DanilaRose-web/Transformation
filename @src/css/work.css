@@ -1,0 +1,226 @@
+.work {
+   padding-top: 34px;
+}
+
+.container-wrap {
+   padding: 0 30px;
+   position: relative;
+}
+
+.container-wrap::after {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: -37px;
+   width: 755px;
+   height: 670px;
+   background: linear-gradient(180deg, #6A369E 16.46%, rgba(106, 54, 158, 0.669576) 71.15%, rgba(106, 54, 158, 0) 100%);
+   z-index: -1;
+}
+
+.work-title {
+   margin: 0 auto;
+   padding-top: 67px;
+   margin-bottom: 73px;
+   width: 100%;
+   position: inherit;
+}
+
+/* work slider */
+.work-slider {
+   width: 100%;
+}
+ 
+.work-slider .slide {
+   display: flex;
+}
+
+.work-slider .slide .slide-wrap {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   position: relative;
+   transition: all 0.4s ease;
+}
+
+.work-slider .slide a {
+   display: flex;
+   position: relative;
+   overflow: hidden;
+   cursor: pointer;
+}
+
+.work-slider .slide a::after {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   opacity: 0;
+   visibility: hidden;
+   background-color: rgba(0, 0, 0, .6);
+   transition: all 0.3s ease;
+}
+
+.work-slider .slide a:not(:last-child) {
+   margin-bottom: 22px;
+   flex: 1 1 auto;
+}
+
+.work-slider .slide a img {
+   max-width: 100%;
+   transform: scale(1.005);
+   transition: all 1s ease-in-out;
+}
+
+.work-slider .slide a .plus {
+   width: 45px;
+   height: 45px;
+   opacity: 0;
+   visibility: hidden;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   z-index: 2;
+   transform: translate(-50%, -50%);
+   transition: all 0.3s ease;
+}
+
+
+.work-slider .slide a:hover::after {
+   opacity: 1;
+   visibility: visible;
+   width: 100%;
+   height: 100%;
+}
+
+.work-slider .slide a:hover .plus {
+   opacity: 1;
+   visibility: visible;
+   transition-delay: 0.5s;
+   z-index: 2;
+}
+
+
+
+
+.work-slider .slick-slide {
+   margin: 0 10px;
+}
+
+
+.hover-block {
+   padding: 10px 12px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 94%;
+   height: 94%;
+   z-index: 2;
+   transform: translate(-50%, -50%);
+   overflow-wrap: break-word;
+   display: flex;
+   align-items: flex-end;
+   justify-content: flex-start;
+}
+
+/* анимация рамки при наведении на слайд */
+.hover-block::before,
+.hover-block::after {
+   content: '';
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   transition: all 0.5s;
+}
+
+.hover-block::before {
+   border-top: 1px solid white;
+   border-bottom: 1px solid white;
+   transform: scale(0, 1);
+}
+
+.hover-block::after {
+   border-right: 1px solid white;
+   border-left: 1px solid white;
+   transform: scale(1, 0);
+}
+
+.work-slider .slide a:hover .projects-slides_text {
+   opacity: 1;
+}
+
+.work-slider .slide a:hover .hover-block::before,
+.work-slider .slide a:hover .hover-block::after {
+   transform: scale(1, 1);
+}
+
+
+
+
+
+
+
+
+.hover-block .title {
+   font-size: 20px;
+   font-weight: 500;
+   line-height: 120%;
+   color: #fff;
+   opacity: 0;
+   visibility: hidden;
+   transform: translateX(70px);
+   transition: all 0.4s ease;
+}
+
+.work-slider .slide a:hover .title {
+   opacity: 1;
+   visibility: visible;
+   transform: translateX(0);
+}
+
+
+
+
+
+.work-slider .slick-track, .work-slider .slick-slide, .work-slider .slick-slide > div, .work-slider .slick-slide .slide {
+   display: flex;
+}
+
+
+
+@media all and (max-width: 1500px) {
+   .hover-block .title { font-size: calc((100vw - 1200px)/ (1500 - 1200) * (20 - 18) + 18px); }
+}
+
+@media all and (max-width: 1200px) {
+   .hover-block .title { font-size: calc((100vw - 800px)/ (1200 - 800) * (18 - 16) + 16px); }
+}
+
+@media all and (max-width: 799px) {
+   .hover-block .title { font-size: calc((100vw - 500px)/ (800 - 500) * (16 - 15) + 15px); }
+}
+
+@media all and (max-width: 768px) {
+   .container-wrap { padding: 0 15px; }
+}
+
+@media all and (max-width: 720px) {
+   .container-wrap::after { left: 0; width: 100%; }
+}
+
+@media all and (max-width: 700px) {
+   .work-title { margin-bottom: 50px; padding-top: 75px; }
+}
+
+@media all and (max-width: 540px) {
+   .work-title div { max-width: 300px; }
+}
+
+@media all and (max-width: 500px) {
+   .hover-block .title { font-size: calc((100vw - 280px)/ (500 - 280) * (26 - 18) + 18px); }
+}

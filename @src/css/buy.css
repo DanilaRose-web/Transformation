@@ -1,0 +1,74 @@
+.buy {
+   padding-top: 77px;
+   padding-bottom: 66px;
+   position: relative;
+   background: url('../img/dist/buy-bg.webp') no-repeat center;
+   background-size: cover;
+}
+
+.buy-container {
+   padding: 0 30px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   position: relative;
+   z-index: 3;
+}
+
+.buy-title {
+   padding-bottom: 28px;
+   margin-bottom: 36px;
+   font-family: 'Playfair Display', serif;
+   font-weight: 500;
+   font-size: 52px;
+   line-height: 89%;
+   letter-spacing: -0.03em;
+   color: #FFFFFF;
+   border-bottom: 0.5px solid #CAD1D7;
+}
+
+.buy-text {
+   max-width: 663px;
+}
+
+.top-text {
+   padding-bottom: 28px;
+   margin-bottom: 28px;
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 150%;
+   color: #FFFFFF;
+}
+
+.bottom-text {
+   font-weight: 600;
+   font-size: 22px;
+   line-height: 140%;
+   color: #FFFFFF;
+   max-width: 645px;
+}
+
+@media all and (max-width: 1050px) {
+   .buy-container { flex-direction: column; align-items: flex-start; }
+   .buy-text { margin-bottom: 44px; }
+}
+
+@media all and (max-width: 900px) {
+   .buy { background: url('../img/dist/buy-img-left.webp') no-repeat center; background-size: cover; }
+}
+
+@media all and (max-width: 768px) {
+   .buy-container { padding: 0 15px; }
+}
+
+@media all and (max-width: 700px) {
+   .buy { padding-top: 75px; padding-bottom: 75px; }
+}
+
+@media all and (max-width: 500px) {
+   .bottom-text { font-size: calc((100vw - 280px)/ (500 - 280) * (25 - 20) + 20px); }
+}
+
+@media all and (max-width: 450px) {
+   .buy { background: url('../img/dist/buy-img-left-mob.webp') no-repeat center; background-size: cover; }
+}
